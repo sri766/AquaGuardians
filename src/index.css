@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom Styles */
+body {
+  @apply h-full bg-[#100a36] text-white;
+}
+
+.logo {
+  @apply bg-gradient-to-tr from-[#9d00ff] to-[#00b3ff] bg-clip-text text-transparent !important;
+}
+
+.title {
+  @apply bg-gradient-to-tl from-[#aa00ff] to-[#00b3ff] bg-clip-text text-transparent !important;
+}
+
+
+.water-fill-text {
+  @apply relative inline-block text-6xl font-bold overflow-hidden;
+  color: transparent;
+}
+
+.water-fill-text::before {
+  content: '';
+  @apply absolute top-full left-0 w-full h-full;
+  background: linear-gradient(0deg, #00f 0%, #00f8 50%, transparent 100%);
+  animation: fillWater 5s infinite;
+  z-index: -1;
+}
+
+@keyframes fillWater {
+  0%, 100% {
+    top: 100%;
+  }
+  50% {
+    top: 0%;
+  }
+}
+
+.opacity-15 {
+  opacity: 0.15;
+}
+
+
